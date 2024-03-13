@@ -11,7 +11,28 @@ orgs.newOrg('eclipse-apoapsis') {
     orgs.newRepo('ort-server') {
       allow_auto_merge: true,
       allow_squash_merge: false,
+      description: "A scalable server implementation of the OSS Review Toolkit.",
+      has_discussions: true,
       has_wiki: false,
+
+      branch_protection_rules: [
+        {
+          dismisses_stale_reviews: true,
+          is_admin_enforced: true,
+          pattern: "main",
+          required_approving_review_count: 1,
+          required_status_checks+: [
+            "build",
+            "commit-lint",
+            "detekt-issues",
+            "integration-test",
+            "reuse-tool",
+            "test",
+            "wrapper-validation",
+          ],
+          requires_linear_history: true,
+        },
+      ]
     },
   ],
 }
