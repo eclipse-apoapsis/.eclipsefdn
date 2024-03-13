@@ -14,12 +14,10 @@ orgs.newOrg('eclipse-apoapsis') {
       description: "A scalable server implementation of the OSS Review Toolkit.",
       has_discussions: true,
       has_wiki: false,
-
       branch_protection_rules: [
-        {
+        orgs.newBranchProtectionRule('main') {
           dismisses_stale_reviews: true,
           is_admin_enforced: true,
-          pattern: "main",
           required_approving_review_count: 1,
           required_status_checks+: [
             "build",
