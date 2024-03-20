@@ -19,7 +19,7 @@ orgs.newOrg('eclipse-apoapsis') {
           dismisses_stale_reviews: true,
           is_admin_enforced: true,
           required_approving_review_count: 1,
-          required_status_checks+: [
+          required_status_checks: [
             "build",
             "commit-lint",
             "detekt-issues",
