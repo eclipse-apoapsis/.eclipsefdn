@@ -30,7 +30,12 @@ orgs.newOrg('eclipse-apoapsis') {
           ],
           requires_linear_history: true,
         },
-      ]
+      ],
+      secrets: [
+        orgs.newRepoSecret('RENOVATE_TOKEN') {
+          value: "pass:bots/technology.apoapsis/github.com/renovate-token",
+        },
+      ],
     },
   ],
 }
