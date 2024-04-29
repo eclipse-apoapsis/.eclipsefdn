@@ -21,9 +21,11 @@ orgs.newOrg('eclipse-apoapsis') {
           required_approving_review_count: 1,
           required_status_checks: [
             "build",
+            "build-ui",
             "commit-lint",
             "detekt-issues",
             "integration-test",
+            "renovate-validation",
             "reuse-tool",
             "test",
             "wrapper-validation",
