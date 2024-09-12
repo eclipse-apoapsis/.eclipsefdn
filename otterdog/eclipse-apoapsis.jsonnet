@@ -58,6 +58,7 @@ orgs.newOrg('eclipse-apoapsis') {
             "renovate-validation",
             "reuse-tool",
             "test",
+            "website-test",
             "wrapper-validation"
           ],
           requires_linear_history: true,
