@@ -12,16 +12,12 @@ orgs.newOrg('eclipse-apoapsis') {
       description: "The guidance for the Open Source Component Management process consists of a generic architecture description, usage blueprints, a concept of the abstraction layer and a collection of use cases. It enables you to quickly match your organization's needs with available solutions and jump-start your process definition by providing templates.",
       topics: [
         "compliance",
-        "cyclonedx",
-        "hacktoberfest",
         "ospo",
         "oss-compliance",
-        "oss-review-toolkit",
         "sbom",
         "sca",
         "software-composition-analysis",
-        "spdx",
-        "vulnerability-detection"
+        "spdx"
       ],
       gh_pages_build_type: "workflow",
       has_discussions: true,
@@ -48,6 +44,19 @@ orgs.newOrg('eclipse-apoapsis') {
       allow_auto_merge: true,
       allow_squash_merge: false,
       description: "A scalable server implementation of the OSS Review Toolkit.",
+      topics: [
+        "compliance",
+        "cyclonedx",
+        "hacktoberfest",
+        "ospo",
+        "oss-compliance",
+        "oss-review-toolkit",
+        "sbom",
+        "sca",
+        "software-composition-analysis",
+        "spdx",
+        "vulnerability-detection"
+      ],
       has_discussions: true,
       has_wiki: false,
       secrets: [
