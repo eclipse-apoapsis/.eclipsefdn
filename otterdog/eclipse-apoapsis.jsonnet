@@ -64,10 +64,13 @@ orgs.newOrg('eclipse-apoapsis') {
           value: "pass:bots/technology.apoapsis/github.com/renovate-token",
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          dismisses_stale_reviews: true,
-          is_admin_enforced: true,
+      rulesets: [
+        orgs.newRuleset('main') {
+          allows_updates: true,
+          include_refs+: [
+            "refs/head/main",
+          ],
+          requires_pull_request: true,
           required_approving_review_count: 1,
           required_status_checks: [
             "build",
@@ -84,6 +87,12 @@ orgs.newOrg('eclipse-apoapsis') {
             "wrapper-validation"
           ],
           requires_linear_history: true,
+          require_last_push_approval: false,
+          requires_commit_signatures: false,
+          requires_review_thread_resolution: false,
+          required_merge_queue: orgs.newMergeQueue() {
+            merge_method: "REBASE",
+          },
         },
       ],
     },
