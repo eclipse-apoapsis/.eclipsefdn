@@ -72,7 +72,7 @@ orgs.newOrg('eclipse-apoapsis') {
           ],
           requires_pull_request: true,
           required_approving_review_count: 1,
-          required_status_checks: [
+          required_status_checks+: [
             "build",
             "build-ui",
             "commit-lint",
