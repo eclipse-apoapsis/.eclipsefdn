@@ -66,12 +66,13 @@ orgs.newOrg('eclipse-apoapsis') {
       ],
       rulesets: [
         orgs.newRepoRuleset('main') {
-          allows_updates: true,
           include_refs+: [
             "refs/heads/main",
           ],
-          requires_pull_request: true,
-          required_approving_review_count: 1,
+          required_pull_request+: {
+            required_approving_review_count: 1,
+            dismisses_stale_reviews: true,
+          },
           required_status_checks+: [
             "build",
             "build-ui",
@@ -87,9 +88,6 @@ orgs.newOrg('eclipse-apoapsis') {
             "wrapper-validation"
           ],
           requires_linear_history: true,
-          requires_last_push_approval: false,
-          requires_commit_signatures: false,
-          requires_review_thread_resolution: false,
           required_merge_queue: orgs.newMergeQueue() {
             merge_method: "REBASE",
           },
