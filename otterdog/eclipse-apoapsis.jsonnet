@@ -68,7 +68,7 @@ orgs.newOrg('eclipse-apoapsis') {
         orgs.newRepoRuleset('main') {
           allows_updates: true,
           include_refs+: [
-            "refs/head/main",
+            "refs/heads/main",
           ],
           requires_pull_request: true,
           required_approving_review_count: 1,
@@ -87,7 +87,7 @@ orgs.newOrg('eclipse-apoapsis') {
             "wrapper-validation"
           ],
           requires_linear_history: true,
-          require_last_push_approval: false,
+          requires_last_push_approval: false,
           requires_commit_signatures: false,
           requires_review_thread_resolution: false,
           required_merge_queue: orgs.newMergeQueue() {
