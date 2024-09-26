@@ -65,7 +65,7 @@ orgs.newOrg('eclipse-apoapsis') {
         },
       ],
       rulesets: [
-        orgs.newRuleset('main') {
+        orgs.newRepoRuleset('main') {
           allows_updates: true,
           include_refs+: [
             "refs/head/main",
