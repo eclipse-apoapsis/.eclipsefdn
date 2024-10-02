@@ -67,7 +67,12 @@ orgs.newOrg('eclipse-apoapsis') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
       rulesets: [
         orgs.newRepoRuleset('main') {
