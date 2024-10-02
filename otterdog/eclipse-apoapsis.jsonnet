@@ -5,6 +5,23 @@ orgs.newOrg('eclipse-apoapsis') {
     description: "The Eclipse Apoapsis project provides a process and a reference implementation for large-scale software composition analysis (SCA).",
     name: "Apoapsis project",
   },
+  secrets+: [
+    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
+      value: "pass:bots/technology.apoapsis/gpg/key_id",
+    },
+    orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
+      value: "pass:bots/technology.apoapsis/gpg/passphrase",
+    },
+    orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
+      value: "pass:bots/technology.apoapsis/gpg/secret-subkeys.asc",
+    },
+    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
+      value: "pass:bots/technology.apoapsis/oss.sonatype.org/gh-token-password",
+    },
+    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
+      value: "pass:bots/technology.apoapsis/oss.sonatype.org/gh-token-username",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('guidance') {
       allow_auto_merge: true,
