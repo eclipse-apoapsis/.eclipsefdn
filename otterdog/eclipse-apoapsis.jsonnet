@@ -44,6 +44,8 @@ orgs.newOrg('eclipse-apoapsis') {
       allow_auto_merge: true,
       allow_squash_merge: false,
       description: "A scalable server implementation of the OSS Review Toolkit.",
+      gh_pages_build_type: "workflow",
+      homepage: "https://eclipse-apoapsis.github.io/ort-server/",
       topics: [
         "compliance",
         "cyclonedx",
@@ -63,6 +65,9 @@ orgs.newOrg('eclipse-apoapsis') {
         orgs.newRepoSecret('RENOVATE_TOKEN') {
           value: "pass:bots/technology.apoapsis/github.com/renovate-token",
         },
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages'),
       ],
       rulesets: [
         orgs.newRepoRuleset('main') {
