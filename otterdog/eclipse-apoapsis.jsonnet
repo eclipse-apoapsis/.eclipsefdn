@@ -100,21 +100,23 @@ orgs.newOrg('eclipse-apoapsis') {
             required_approving_review_count: 1,
             dismisses_stale_reviews: true,
           },
-          required_status_checks: [
-            "build",
-            "build-ui",
-            "commit-lint",
-            "detekt-issues",
-            "eslint",
-            "integration-test",
-            "prettier-ui",
-            "prettier-website",
-            "renovate-validation",
-            "reuse-tool",
-            "test",
-            "website-test",
-            "wrapper-validation"
-          ],
+          required_status_checks+: {
+            status_checks: [
+              "build",
+              "build-ui",
+              "commit-lint",
+              "detekt-issues",
+              "eslint",
+              "integration-test",
+              "prettier-ui",
+              "prettier-website",
+              "renovate-validation",
+              "reuse-tool",
+              "test",
+              "website-test",
+              "wrapper-validation"
+            ],
+          },
           requires_linear_history: true,
           required_merge_queue: orgs.newMergeQueue() {
             merge_method: "REBASE",
