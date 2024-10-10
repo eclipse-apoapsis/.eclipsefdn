@@ -9,6 +9,9 @@ orgs.newOrg('eclipse-apoapsis') {
     orgs.newOrgSecret('ORG_GPG_KEY_ID') {
       value: "pass:bots/technology.apoapsis/gpg/key_id",
     },
+    orgs.newOrgSecret('ORG_GPG_SUBKEY_ID') {
+      value: "pass:bots/technology.apoapsis/gpg/subkey_id",
+    },
     orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
       value: "pass:bots/technology.apoapsis/gpg/passphrase",
     },
