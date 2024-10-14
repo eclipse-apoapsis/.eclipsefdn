@@ -126,5 +126,25 @@ orgs.newOrg('eclipse-apoapsis') {
         },
       ],
     },
+    orgs.newRepo('renovate') {
+      allow_auto_merge: true,
+      allow_squash_merge: false,
+      description: "Configuration to run Renovate as a GitHub action.",
+      has_discussions: false,
+      has_wiki: false,
+      secrets: [
+        orgs.newRepoSecret('RENOVATE_TOKEN') {
+          value: "pass:bots/technology.apoapsis/github.com/renovate-token",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          dismisses_stale_reviews: true,
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+          requires_linear_history: true,
+        },
+      ],
+    }
   ],
 }
