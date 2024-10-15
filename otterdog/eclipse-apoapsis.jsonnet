@@ -48,6 +48,9 @@ orgs.newOrg('eclipse-apoapsis') {
           dismisses_stale_reviews: true,
           is_admin_enforced: true,
           required_approving_review_count: 1,
+          required_status_checks+: [
+            "renovate-validation"
+          ],
           requires_linear_history: true,
         },
       ],
@@ -142,6 +145,9 @@ orgs.newOrg('eclipse-apoapsis') {
           dismisses_stale_reviews: true,
           is_admin_enforced: true,
           required_approving_review_count: 1,
+          required_status_checks+: [
+            "renovate-validation"
+          ],
           requires_linear_history: true,
         },
       ],
