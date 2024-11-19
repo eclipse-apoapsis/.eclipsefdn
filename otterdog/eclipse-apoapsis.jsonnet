@@ -18,6 +18,12 @@ orgs.newOrg('eclipse-apoapsis') {
     orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
       value: "pass:bots/technology.apoapsis/gpg/secret-subkeys.asc",
     },
+    orgs.newOrgSecret('SSH_PASSHPHRASE') {
+      value: "pass:bots/technology.apoapsis/gpg/passphrase",
+    },
+    orgs.newOrgSecret('SSH_PRIVATE_KEY') {
+      value: "pass:bots/technology.apoapsis/gpg/secret-subkeys.asc",
+    },
     orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
       value: "pass:bots/technology.apoapsis/oss.sonatype.org/gh-token-password",
     },
