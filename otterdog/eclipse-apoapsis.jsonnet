@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-apoapsis') {
+orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
   settings+: {
     description: "The Eclipse Apoapsis project provides a process and a reference implementation for large-scale software composition analysis (SCA).",
     name: "Apoapsis project",
