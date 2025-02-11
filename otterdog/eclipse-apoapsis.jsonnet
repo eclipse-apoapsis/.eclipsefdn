@@ -50,6 +50,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           required_approving_review_count: 1,
           required_status_checks+: [
             "renovate-validation",
+            "reuse-tool",
             "Website Test"
           ],
           requires_linear_history: true,
