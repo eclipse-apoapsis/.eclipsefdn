@@ -123,7 +123,6 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
               "test",
               "website-test",
               "Build core Docker Image",
-              "Build kubernetes-jobmonitor Docker Image",
               "Build orchestrator Docker Image",
               "Build ui Docker Image",
               "Build advisor-worker Docker Image",
