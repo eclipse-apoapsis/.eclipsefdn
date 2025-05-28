@@ -26,6 +26,25 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
     },
   ],
   _repositories+:: [
+    orgs.newRepo('actions') {
+      aliases: ['setup-osc'],
+      allow_auto_merge: true,
+      allow_squash_merge: false,
+      description: "A collection of GitHub actions for the Eclipse Apoapsis project.",
+      has_discussions: false,
+      has_wiki: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          dismisses_stale_reviews: true,
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+          required_status_checks+: [
+            "renovate-validation"
+          ],
+          requires_linear_history: true,
+        },
+      ]
+    },
     orgs.newRepo('guidance') {
       allow_auto_merge: true,
       allow_squash_merge: false,
@@ -163,24 +182,6 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           requires_linear_history: true,
         },
       ],
-    },
-    orgs.newRepo('setup-osc') {
-      allow_auto_merge: true,
-      allow_squash_merge: false,
-      description: "A GitHub action to set up the ORT Server Client CLI (osc).",
-      has_discussions: false,
-      has_wiki: false,
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          dismisses_stale_reviews: true,
-          is_admin_enforced: true,
-          required_approving_review_count: 1,
-          required_status_checks+: [
-            "renovate-validation"
-          ],
-          requires_linear_history: true,
-        },
-      ]
     }
   ],
 } + {
