@@ -18,11 +18,11 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
     orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
       value: "pass:bots/technology.apoapsis/gpg/secret-subkeys.asc",
     },
-    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
-      value: "pass:bots/technology.apoapsis/oss.sonatype.org/gh-token-password",
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/technology.apoapsis/central.sonatype.org/token-password",
     },
-    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
-      value: "pass:bots/technology.apoapsis/oss.sonatype.org/gh-token-username",
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/technology.apoapsis/central.sonatype.org/token-username",
     },
   ],
   _repositories+:: [
