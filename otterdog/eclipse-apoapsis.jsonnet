@@ -129,6 +129,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           },
           required_status_checks+: {
             status_checks: [
+              "authorization-test",
               "build",
               "build-ui",
               "commit-lint",
