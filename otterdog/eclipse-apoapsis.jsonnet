@@ -185,6 +185,34 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
       ],
     }
   ],
+  teams+: [
+    orgs.newTeam('backend-devs') {
+      description: "Project committers active in backend development.",
+      privacy: "visible",
+      notifications: true,
+      members+: [
+        "bs-ondem",
+        "MarcelBochtler",
+        "mnonnenmacher",
+        "nnobelis",
+        "oheger-bosch",
+        "sschuberth",
+        "wkl3nk",
+      ],
+      skip_non_organization_members: true,
+    },
+    orgs.newTeam('frontend-devs') {
+      description: "Project commmitters active in frontend development.",
+      privacy: "visible",
+      notifications: true,
+      members+: [
+        "Etsija",
+        "lamppu",
+        "mnonnenmacher",
+        "sschuberth",
+      ],
+    }
+  ],
 } + {
   # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
   _repositories+:: [
