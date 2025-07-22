@@ -199,7 +199,6 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         "sschuberth",
         "wkl3nk",
       ],
-      skip_non_organization_members: true,
     },
     orgs.newTeam('frontend-devs') {
       description: "Project commmitters active in frontend development.",
