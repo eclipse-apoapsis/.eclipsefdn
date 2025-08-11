@@ -39,6 +39,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           is_admin_enforced: true,
           required_approving_review_count: 1,
           required_status_checks+: [
+            "commit-lint",
             "renovate-validation"
           ],
           requires_linear_history: true,
