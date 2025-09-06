@@ -26,6 +26,23 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
     },
   ],
   _repositories+:: [
+    orgs.newRepo('.github') {
+      allow_auto_merge: true,
+      allow_squash_merge: false,
+      description: "Default GitHub configuration.",
+      has_discussions: false,
+      has_issues: false,
+      has_projects: false,
+      has_wiki: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          dismisses_stale_reviews: true,
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+          requires_linear_history: true,
+        },
+      ]
+    },
     orgs.newRepo('actions') {
       aliases: ['setup-osc'],
       allow_auto_merge: true,
@@ -134,6 +151,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
               "build",
               "build-ui",
               "commit-lint",
+              "completions",
               "detekt-issues",
               "eslint",
               "integration-test",
@@ -150,6 +168,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
               "Build analyzer-worker Docker Image",
               "Build config-worker Docker Image",
               "Build evaluator-worker Docker Image",
+              "Build maintenance-tasks Docker Image",
               "Build notifier-worker Docker Image",
               "Build reporter-worker Docker Image",
               "Build scanner-worker Docker Image"
@@ -212,10 +231,5 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         "sschuberth",
       ],
     }
-  ],
-} + {
-  # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
-  _repositories+:: [
-    orgs.newRepo('.github')
   ],
 }
