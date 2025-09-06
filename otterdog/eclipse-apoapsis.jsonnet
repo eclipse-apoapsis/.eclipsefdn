@@ -134,6 +134,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
               "build",
               "build-ui",
               "commit-lint",
+              "completions",
               "detekt-issues",
               "eslint",
               "integration-test",
@@ -150,6 +151,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
               "Build analyzer-worker Docker Image",
               "Build config-worker Docker Image",
               "Build evaluator-worker Docker Image",
+              "Build maintenance-tasks Docker Image",
               "Build notifier-worker Docker Image",
               "Build reporter-worker Docker Image",
               "Build scanner-worker Docker Image"
