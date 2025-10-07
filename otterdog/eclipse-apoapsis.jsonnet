@@ -146,7 +146,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
             dismisses_stale_reviews: true,
           },
           required_status_checks+: {
-            status_checks: [
+            status_checks+: [
               "authorization-test",
               "build",
               "build-ui",
