@@ -129,6 +129,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         },
       ],
       environments: [
+        orgs.newEnvironment('copilot'),
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
             "main"
