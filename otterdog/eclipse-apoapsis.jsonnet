@@ -102,6 +102,15 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         },
       ],
     },
+    orgs.newRepo('helm-charts') {
+      allow_auto_merge: true,
+      allow_squash_merge: false,
+      auto_init: false,
+      description: "A collection of Helm charts for the Eclipse Apoapsis project.",
+      has_discussions: false,
+      has_projects: false,
+      has_wiki: false,
+    },
     orgs.newRepo('ort-server') {
       allow_auto_merge: true,
       allow_squash_merge: false,
