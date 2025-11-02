@@ -110,6 +110,18 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          dismisses_stale_reviews: true,
+          is_admin_enforced: true,
+          required_approving_review_count: 1,
+          required_status_checks+: [
+            "commit-lint",
+            "renovate-validation"
+          ],
+          requires_linear_history: true,
+        },
+      ]
     },
     orgs.newRepo('ort-server') {
       allow_auto_merge: true,
