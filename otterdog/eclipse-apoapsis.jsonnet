@@ -121,7 +121,10 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           ],
           requires_linear_history: true,
         },
-      ]
+      ],
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
     },
     orgs.newRepo('ort-server') {
       allow_auto_merge: true,
