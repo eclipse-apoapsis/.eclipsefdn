@@ -259,6 +259,27 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         "mnonnenmacher",
         "sschuberth",
       ],
+    },
+    orgs.newTeam('bosch') {
+      description: "Active project committers from Robert Bosch GmbH.",
+      privacy: "visible",
+      notifications: true,
+      members+: [
+        "MarcelBochtler",
+        "nnobelis",
+        "oheger-bosch",
+      ],
+    },
+    orgs.newTeam('doubleopen') {
+      description: "Active project committers from Double Open Oy.",
+      privacy: "visible",
+      notifications: true,
+      members+: [
+        "Etsija",
+        "lamppu",
+        "mnonnenmacher",
+        "sschuberth"
+      ],
     }
   ],
 }
