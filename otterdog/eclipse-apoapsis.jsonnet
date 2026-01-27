@@ -57,7 +57,11 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           required_approving_review_count: 1,
           required_status_checks+: [
             "commit-lint",
-            "renovate-validation"
+            "renovate-validation",
+            "test-setup-osc (macos-15-intel)",
+            "test-setup-osc (macos-26)",
+            "test-setup-osc (ubuntu-24.04)",
+            "test-setup-osc (windows-2025)"
           ],
           requires_linear_history: true,
         },
