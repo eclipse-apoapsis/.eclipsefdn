@@ -111,7 +111,6 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
       allow_squash_merge: false,
       auto_init: false,
       description: "A collection of Helm charts for the Eclipse Apoapsis project.",
-      has_discussions: false,
       has_projects: false,
       has_wiki: false,
       branch_protection_rules: [
@@ -228,6 +227,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         "ort-server",
         "security",
       ],
+      has_projects: false,
       has_wiki: false,
       rulesets: [
         orgs.newRepoRuleset('main') {
@@ -252,6 +252,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
       allow_squash_merge: false,
       description: "Configuration to run Renovate as a GitHub action.",
       has_discussions: false,
+      has_projects: false,
       has_wiki: false,
       secrets: [
         orgs.newRepoSecret('RENOVATE_TOKEN') {
