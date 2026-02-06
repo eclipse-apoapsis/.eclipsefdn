@@ -217,7 +217,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
     orgs.newRepo('ort-server-credential-helper') {
       allow_auto_merge: true,
       allow_squash_merge: false,
-      description: "The tool to provide credentials to the external tools like GIT or Bazel, used by ORT server workers",
+      description: "A tool to provide credentials to external tools like Git or Bazel, used by the ORT Server.",
       gh_pages_build_type: "workflow",
       topics: [
         "bazel",
