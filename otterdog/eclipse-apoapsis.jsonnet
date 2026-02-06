@@ -214,6 +214,39 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
         },
       ],
     },
+    orgs.newRepo('ort-server-credential-helper') {
+      allow_auto_merge: true,
+      allow_squash_merge: false,
+      description: "The tool to provide credentials to the external tools like GIT or Bazel, used by ORT server workers",
+      gh_pages_build_type: "workflow",
+      topics: [
+        "bazel",
+        "bazel-credential-helper",
+        "credentials",
+        "git",
+        "git-credential-helper",
+        "ort-server",
+        "security",
+      ],
+      has_wiki: false,
+      rulesets: [
+        orgs.newRepoRuleset('main') {
+          include_refs+: [
+            "refs/heads/main",
+          ],
+          required_pull_request+: {
+            required_approving_review_count: 1,
+            dismisses_stale_reviews: true,
+          },
+          required_status_checks+: {
+            status_checks+: [
+              "commit-lint",
+            ],
+          },
+          requires_linear_history: true,
+        },
+      ],
+    },
     orgs.newRepo('renovate') {
       allow_auto_merge: true,
       allow_squash_merge: false,
@@ -236,7 +269,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
           requires_linear_history: true,
         },
       ],
-    }
+    },
   ],
   teams+: [
     orgs.newTeam('backend-devs') {
