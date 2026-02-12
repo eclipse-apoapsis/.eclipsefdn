@@ -24,6 +24,9 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
     orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
       value: "pass:bots/technology.apoapsis/central.sonatype.org/token-username",
     },
+    orgs.newOrgSecret('GH_API_TOKEN') {
+      value: "pass:bots/technology.apoapsis/github.com/api-token",
+    },
   ],
   _repositories+:: [
     orgs.newRepo('.github') {
