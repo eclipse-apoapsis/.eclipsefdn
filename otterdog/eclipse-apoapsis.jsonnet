@@ -182,6 +182,7 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
             status_checks+: [
               "authorization-test",
               "build",
+              "build-health",
               "build-ui",
               "commit-lint",
               "completions",
@@ -190,7 +191,6 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
               "integration-test",
               "prettier-ui",
               "prettier-website",
-              "project-health",
               "publication-test",
               "renovate-validation",
               "reuse-tool",
