@@ -27,6 +27,9 @@ orgs.newOrg('technology.apoapsis', 'eclipse-apoapsis') {
     orgs.newOrgSecret('GH_API_TOKEN') {
       value: "pass:bots/technology.apoapsis/github.com/api-token",
     },
+    orgs.newOrgSecret('SIGNPATH_API_TOKEN') {
+      value: "pass:bots/technology.apoapsis/signpath.io/api-token",
+    },
   ],
   _repositories+:: [
     orgs.newRepo('.github') {
